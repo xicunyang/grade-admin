@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>教师管理</title>
+    <meta name="Description" content="课程管理"/>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="/grade-admin/static/css/weadmin.css">
+    <link rel="stylesheet" href="/grade-admin/static/mt-fonts/iconfont/iconfont.css">
+    <link rel="stylesheet" href="/grade-admin/static/css/teacher/teacherList.css">
+</head>
+<body>
+<div class="weadmin-nav">
+			<span class="layui-breadcrumb">
+        <a href="">教师管理</a>
+        <a>
+          <cite>教师管理</cite></a>
+      </span>
+    <a class="layui-btn layui-btn-sm" style="line-height:1.6em;margin-top:3px;float:right"
+       href="javascript:location.replace(location.href);" title="刷新">
+        <i class="layui-icon" style="line-height:25px">ဂ</i></a>
+</div>
+<div class="weadmin-body">
+    <div class="layui-row">
+        <!--<form>-->
+        条件搜索：
+        <div class="layui-inline">
+            <input type="text" name="keyword" placeholder="姓名 / 编号" autocomplete="off" class="layui-input">
+        </div>
+        <button class="layui-btn search-teacher-btn"><i class="layui-icon">&#xe615;</i></button>
+
+        <!--<div class="search-date">-->
+            <!--<div class="layui-inline">-->
+                <!--<input class="layui-input input-date" placeholder="开始日" name="start" id="start">-->
+            <!--</div>-->
+            <!--<div class="layui-inline">-->
+                <!--<input class="layui-input input-date" placeholder="截止日" name="end" id="end">-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--</form>-->
+    </div>
+    <div class="weadmin-block">
+        <!--<button class="layui-btn layui-btn-danger delete-many-data" data-type="getCheckData"><i class="layui-icon">&#xe640;</i>批量删除-->
+        <!--</button>-->
+        <!--<button class="layui-btn layui-btn-warm recovery-many-data" data-type="getCheckData"><i class="layui-icon">&#xe63f;-->
+        <!--</i>批量恢复-->
+        <!--</button>-->
+        <button class="layui-btn add-teacher-btn"><i class="layui-icon">&#xe61f;</i>添加教师
+        </button>
+        <span class="fr" style="line-height:40px">共有数据：<span>...</span> 条</span>
+    </div>
+    <table class="layui-hide" id="teacherList"></table>
+</div>
+
+<div class="add-course-panel">
+    <input type="hidden" id="id">
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">教师编号</label>
+        <div class="layui-input-block">
+            <input class="layui-input" type="text" name="teacherNo" required  lay-verify="required" placeholder="请输入教师编号" autocomplete="off" >
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">教师名称</label>
+        <div class="layui-input-block">
+            <input class="layui-input" type="text" name="teacherName" required  lay-verify="required" placeholder="请输入教师名称" autocomplete="off" >
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">密码</label>
+        <div class="layui-input-block">
+            <input class="layui-input" type="text" name="teacherPwd" required  lay-verify="required" placeholder="请输入教师密码" autocomplete="off" >
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">重复密码</label>
+        <div class="layui-input-block">
+            <input class="layui-input" type="text" name="teacherPwdR" required  lay-verify="required" placeholder="请输入教师密码" autocomplete="off" >
+        </div>
+    </div>
+
+
+    <div class="layui-form-item bottom-btns">
+        <button class="layui-btn layui-btn-danger clear">清空</button>
+
+        <button class="layui-btn submit">确定</button>
+    </div>
+</div>
+
+
+</body>
+<script type="text/javascript" src="/grade-admin/lib/layui/layui.js" charset="utf-8"></script>
+<script src="/grade-admin/static/js/eleDel.js" type="text/javascript" charset="utf-8"></script>
+<script src="/grade-admin/static/js/teacher/teacherList.js" type="text/javascript" charset="utf-8"></script>
+</html>
